@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import AxiosTarget from '../hook/AxiosTarget';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -35,6 +35,11 @@ const Register = () => {
           <div className='columns is-centered'>
             <div className='column is-4-desktop'>
               <form onSubmit={Register} className='box'>
+                <div className='field mt-5'>
+                  <Link to={'/'} className='button is-info'>
+                    Back
+                  </Link>
+                </div>
                 <p className='has-text-centered'>{msg}</p>
                 <div className='field mt-5'>
                   <label className='label'>Name</label>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import AxiosTarget from '../hook/AxiosTarget';
 
 const Login = () => {
@@ -62,6 +62,17 @@ const Login = () => {
                   <button className='button is-success is-fullwidth'>
                     Login
                   </button>
+                </div>
+                <div className='field mt-5'>
+                  <p>
+                    Create Users click{' '}
+                    <Link to={'/register'}>
+                      {' '}
+                      <strong>
+                        <em>here</em>
+                      </strong>{' '}
+                    </Link>
+                  </p>
                 </div>
               </form>
             </div>
